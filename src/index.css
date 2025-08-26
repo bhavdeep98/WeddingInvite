@@ -1,0 +1,295 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Traditional Punjabi Wedding Design System */
+
+@layer base {
+  :root {
+    /* Traditional Punjabi Wedding Color Palette */
+    --background: 35 25% 97%;
+    --foreground: 15 15% 15%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 15 15% 15%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 15 15% 15%;
+
+    /* Rich Golden Primary */
+    --primary: 45 85% 50%;
+    --primary-foreground: 15 15% 15%;
+    --primary-glow: 45 90% 65%;
+
+    /* Deep Maroon Secondary */
+    --secondary: 355 85% 35%;
+    --secondary-foreground: 0 0% 100%;
+
+    /* Forest Green Accent */
+    --accent: 145 65% 35%;
+    --accent-foreground: 0 0% 100%;
+
+    /* Warm Earth Tones */
+    --muted: 35 20% 90%;
+    --muted-foreground: 15 15% 45%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 35 15% 85%;
+    --input: 35 15% 90%;
+    --ring: 45 85% 50%;
+
+    /* Traditional Gradients */
+    --gradient-royal: linear-gradient(135deg, hsl(45 85% 50%), hsl(15 75% 55%));
+    --gradient-festive: linear-gradient(180deg, hsl(355 85% 35%), hsl(355 90% 45%));
+    --gradient-nature: linear-gradient(135deg, hsl(145 65% 35%), hsl(120 70% 40%));
+    --gradient-warm: linear-gradient(45deg, hsl(35 60% 85%), hsl(45 70% 90%));
+
+    /* Elegant Shadows */
+    --shadow-royal: 0 10px 40px -10px hsl(45 85% 50% / 0.3);
+    --shadow-festive: 0 8px 30px -8px hsl(355 85% 35% / 0.25);
+    --shadow-soft: 0 4px 20px -4px hsl(15 15% 15% / 0.1);
+
+    /* Animation Variables */
+    --transition-elegant: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
+    --radius: 0.75rem;
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 210 40% 98%;
+    --primary-foreground: 222.2 47.4% 11.2%;
+
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 212.7 26.8% 83.9%;
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    scroll-behavior: smooth;
+  }
+}
+
+/* Splatter Effect Animations */
+@layer components {
+  .splatter-canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    pointer-events: none;
+    z-index: 9999;
+    transition: opacity 0.3s ease-in-out;
+  }
+
+  .section-transition {
+    transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1),
+                opacity 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .section-transition.transitioning {
+    transform: scale(0.95);
+    opacity: 0.8;
+  }
+
+  /* Enhanced scroll animations */
+  .animate-on-scroll {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+  }
+
+  .animate-on-scroll.animate-fade-in-up {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* Splatter particle animations */
+  @keyframes splatter-fade-in {
+    from {
+      opacity: 0;
+      transform: scale(0) rotate(0deg);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1) rotate(360deg);
+    }
+  }
+
+  @keyframes splatter-fade-out {
+    from {
+      opacity: 1;
+      transform: scale(1);
+    }
+    to {
+      opacity: 0;
+      transform: scale(1.5);
+    }
+  }
+
+  /* Background morphing animation */
+  @keyframes background-morph {
+    0% {
+      clip-path: circle(0% at 50% 50%);
+    }
+    50% {
+      clip-path: circle(70% at 50% 50%);
+    }
+    100% {
+      clip-path: circle(100% at 50% 50%);
+    }
+  }
+
+  .background-morph {
+    animation: background-morph 1.2s ease-in-out;
+  }
+
+  /* Smooth section transitions */
+  .section-container {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .section-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(45deg, transparent 30%, rgba(255, 255, 255, 0.1) 50%, transparent 70%);
+    transform: translateX(-100%);
+    transition: transform 0.6s ease-in-out;
+    pointer-events: none;
+    z-index: 1;
+  }
+
+  .section-container:hover::before {
+    transform: translateX(100%);
+  }
+
+  /* Enhanced scroll indicators */
+  .scroll-indicator {
+    position: fixed;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .scroll-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.3);
+    transition: all 0.3s ease;
+    cursor: pointer;
+  }
+
+  .scroll-dot.active {
+    background: var(--primary);
+    transform: scale(1.5);
+  }
+
+  .scroll-dot:hover {
+    background: var(--primary);
+    transform: scale(1.2);
+  }
+
+  /* Splatter Effect CSS Animations */
+  @keyframes splatter-background {
+    0% {
+      opacity: 0;
+      transform: scale(0);
+    }
+    50% {
+      opacity: 0.3;
+      transform: scale(1);
+    }
+    100% {
+      opacity: 0;
+      transform: scale(1.2);
+    }
+  }
+
+  @keyframes splatter-particle {
+    0% {
+      opacity: 0;
+      transform: translate(-50%, -50%) scale(0) rotate(0deg);
+    }
+    20% {
+      opacity: 1;
+      transform: translate(-50%, -50%) scale(1) rotate(180deg);
+    }
+    100% {
+      opacity: 0;
+      transform: translate(-50%, -50%) scale(1.5) rotate(360deg);
+    }
+  }
+
+  .splatter-background {
+    animation: splatter-background 1.5s ease-out forwards;
+  }
+
+  .splatter-particle {
+    animation: splatter-particle var(--duration) ease-out var(--delay) forwards;
+  }
+}
