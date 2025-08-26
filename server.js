@@ -19,14 +19,14 @@ const PORT = process.env.PORT || 3001;
 app.use(cors());
 app.use(express.json());
 
-// Serve static files from the built frontend
-app.use(express.static(path.join(__dirname, 'dist')));
-
-// API routes
+// API routes logging (simplified)
 app.use('/api', (req, res, next) => {
-  console.log(`${req.method} ${req.path}`);
+  console.log(`API: ${req.method} ${req.originalUrl}`);
   next();
 });
+
+// Serve static files from the built frontend (after API routes)
+app.use(express.static(path.join(__dirname, 'dist')));
 
 // Create data directory if it doesn't exist
 const dataDir = path.join(__dirname, 'form-submissions');
@@ -260,10 +260,15 @@ app.get('/api/health', (req, res) => {
 
 // Catch-all route to serve the frontend
 app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, 'dist', 'index.html'));
+  try {
+    res.sendFile(path.join(__dirname, 'dist', 'index.html'));
+  } catch (error) {
+    console.error('Error serving frontend:', error);
+    res.status(500).send('Error loading page');
+  }
 });
 
-app.listen(PORT, () => {
+const server = app.listen(PORT, () => {
   console.log(`🚀 Form submission server running on http://localhost:${PORT}`);
   console.log(`📁 Submissions will be saved to: ${dataDir}`);
   console.log(`🔗 API endpoints:`);
@@ -277,4 +282,20 @@ app.listen(PORT, () => {
   console.log(`\n🔧 Configuration:`);
   console.log(`   📧 Email notifications: ${process.env.EMAIL_USER ? '✅ Configured' : '❌ Not configured'}`);
   console.log(`   📊 Google Sheets: ${process.env.GOOGLE_SHEETS_SPREADSHEET_ID ? '✅ Configured' : '❌ Not configured'}`);
+});
+
+// Error handling for the server
+server.on('error', (error) => {
+  console.error('❌ Server error:', error);
+  process.exit(1);
+});
+
+process.on('uncaughtException', (error) => {
+  console.error('❌ Uncaught Exception:', error);
+  process.exit(1);
+});
+
+process.on('unhandledRejection', (reason, promise) => {
+  console.error('❌ Unhandled Rejection at:', promise, 'reason:', reason);
+  process.exit(1);
 });
