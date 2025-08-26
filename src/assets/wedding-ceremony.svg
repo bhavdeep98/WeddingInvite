@@ -1,0 +1,76 @@
+<svg width="400" height="300" viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="400" height="300" fill="#FFFFFF"/>
+  
+  <!-- Golden Mat -->
+  <rect x="80" y="180" width="240" height="60" fill="#FFD700" stroke="#FFA500" stroke-width="2"/>
+  
+  <!-- Bride (Left) -->
+  <!-- Body -->
+  <ellipse cx="160" cy="160" rx="18" ry="25" fill="#000000"/>
+  <!-- Lehenga -->
+  <path d="M142 160 Q160 130 178 160 L178 190 Q160 220 142 190 Z" fill="#DC143C"/>
+  <!-- Lehenga Pattern -->
+  <circle cx="150" cy="140" r="2" fill="#FFD700"/>
+  <circle cx="170" cy="140" r="2" fill="#FFD700"/>
+  <circle cx="160" cy="155" r="2" fill="#FFD700"/>
+  <!-- Choli -->
+  <path d="M145 150 Q160 140 175 150 L175 170 Q160 180 145 170 Z" fill="#DC143C"/>
+  <!-- Dupatta -->
+  <path d="M140 140 Q160 120 180 140 L180 160 Q160 180 140 160 Z" fill="#DC143C" opacity="0.7"/>
+  <!-- Hair -->
+  <ellipse cx="160" cy="125" rx="12" ry="8" fill="#000000"/>
+  <!-- Arms -->
+  <ellipse cx="145" cy="155" rx="6" ry="10" fill="#000000" transform="rotate(-30 145 155)"/>
+  <ellipse cx="175" cy="155" rx="6" ry="10" fill="#000000" transform="rotate(30 175 155)"/>
+  <!-- Hands holding scarf -->
+  <circle cx="140" cy="170" r="5" fill="#000000"/>
+  <circle cx="180" cy="170" r="5" fill="#000000"/>
+  
+  <!-- Groom (Right) -->
+  <!-- Body -->
+  <ellipse cx="240" cy="160" rx="18" ry="25" fill="#000000"/>
+  <!-- Kurta -->
+  <path d="M222 160 Q240 130 258 160 L258 190 Q240 220 222 190 Z" fill="#FFE135"/>
+  <!-- Pajama -->
+  <rect x="225" y="175" width="30" height="20" fill="#FFFFFF"/>
+  <!-- Beard -->
+  <ellipse cx="240" cy="145" rx="10" ry="5" fill="#000000"/>
+  <!-- Turban -->
+  <ellipse cx="240" cy="125" rx="15" ry="8" fill="#DC143C"/>
+  <!-- Arms -->
+  <ellipse cx="225" cy="155" rx="6" ry="10" fill="#000000" transform="rotate(-30 225 155)"/>
+  <ellipse cx="255" cy="155" rx="6" ry="10" fill="#000000" transform="rotate(30 255 155)"/>
+  <!-- Hands holding scarf -->
+  <circle cx="220" cy="170" r="5" fill="#000000"/>
+  <circle cx="260" cy="170" r="5" fill="#000000"/>
+  
+  <!-- Red Scarf connecting them -->
+  <path d="M180 170 Q200 165 220 170" fill="none" stroke="#DC143C" stroke-width="3"/>
+  <path d="M180 170 Q200 175 220 170" fill="none" stroke="#DC143C" stroke-width="3"/>
+  
+  <!-- Khanda Symbol -->
+  <g transform="translate(200, 80)">
+    <!-- Central Circle -->
+    <circle cx="0" cy="0" r="15" fill="#FFD700" stroke="#FFA500" stroke-width="2"/>
+    <!-- Vertical Sword -->
+    <rect x="-2" y="-25" width="4" height="50" fill="#FFD700"/>
+    <!-- Horizontal Sword -->
+    <rect x="-25" y="-2" width="50" height="4" fill="#FFD700"/>
+    <!-- Chakkar -->
+    <circle cx="0" cy="0" r="8" fill="none" stroke="#FFD700" stroke-width="3"/>
+  </g>
+  
+  <!-- Garland -->
+  <path d="M120 60 Q200 40 280 60" fill="none" stroke="#228B22" stroke-width="2"/>
+  <!-- Leaves -->
+  <ellipse cx="140" cy="55" rx="6" ry="3" fill="#228B22" transform="rotate(-30 140 55)"/>
+  <ellipse cx="180" cy="50" rx="6" ry="3" fill="#228B22" transform="rotate(30 180 50)"/>
+  <ellipse cx="220" cy="55" rx="6" ry="3" fill="#228B22" transform="rotate(-30 220 55)"/>
+  <ellipse cx="260" cy="50" rx="6" ry="3" fill="#228B22" transform="rotate(30 260 50)"/>
+  <!-- Orange-yellow dots -->
+  <circle cx="150" cy="55" r="2" fill="#FF8C00"/>
+  <circle cx="190" cy="50" r="2" fill="#FF8C00"/>
+  <circle cx="230" cy="55" r="2" fill="#FF8C00"/>
+  <circle cx="270" cy="50" r="2" fill="#FF8C00"/>
+</svg>

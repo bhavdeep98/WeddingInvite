@@ -1,0 +1,67 @@
+<svg width="400" height="300" viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="400" height="300" fill="#FFFFFF"/>
+  
+  <!-- Checkered Mat -->
+  <defs>
+    <pattern id="checkerboard" patternUnits="userSpaceOnUse" width="20" height="20">
+      <rect width="20" height="20" fill="#FFE4B5"/>
+      <rect x="10" y="0" width="10" height="10" fill="#FFDAB9"/>
+      <rect x="0" y="10" width="10" height="10" fill="#FFDAB9"/>
+    </pattern>
+  </defs>
+  <rect x="50" y="180" width="300" height="80" fill="url(#checkerboard)"/>
+  
+  <!-- Cushions -->
+  <ellipse cx="150" cy="200" rx="40" ry="15" fill="#FFD700"/>
+  <ellipse cx="250" cy="200" rx="40" ry="15" fill="#FFD700"/>
+  
+  <!-- Woman (Left) -->
+  <!-- Body -->
+  <ellipse cx="150" cy="160" rx="20" ry="30" fill="#000000"/>
+  <!-- Dress -->
+  <path d="M130 160 Q150 140 170 160 L170 180 Q150 200 130 180 Z" fill="#FFD700"/>
+  <!-- Dress Pattern -->
+  <circle cx="140" cy="150" r="2" fill="#FFE135"/>
+  <circle cx="160" cy="150" r="2" fill="#FFE135"/>
+  <circle cx="150" cy="165" r="2" fill="#FFE135"/>
+  <!-- Hair -->
+  <path d="M135 125 Q150 115 165 125 L165 135 Q150 145 135 135 Z" fill="#000000"/>
+  <!-- Extended Arm -->
+  <ellipse cx="180" cy="155" rx="8" ry="20" fill="#000000" transform="rotate(30 180 155)"/>
+  <!-- Hand with Mehandi -->
+  <ellipse cx="190" cy="145" rx="12" ry="8" fill="#000000"/>
+  <!-- Mehandi Pattern -->
+  <path d="M185 140 Q190 135 195 140 Q190 145 185 140" fill="none" stroke="#8B4513" stroke-width="1"/>
+  <path d="M185 145 Q190 140 195 145 Q190 150 185 145" fill="none" stroke="#8B4513" stroke-width="1"/>
+  <circle cx="190" cy="142" r="1" fill="#8B4513"/>
+  
+  <!-- Man (Right) -->
+  <!-- Body -->
+  <ellipse cx="250" cy="160" rx="20" ry="30" fill="#000000"/>
+  <!-- Kurta -->
+  <path d="M230 160 Q250 140 270 160 L270 180 Q250 200 230 180 Z" fill="#FFD700"/>
+  <!-- Pants -->
+  <rect x="235" y="175" width="30" height="20" fill="#FFFFFF"/>
+  <!-- Beard -->
+  <ellipse cx="250" cy="145" rx="12" ry="6" fill="#000000"/>
+  <!-- Turban -->
+  <ellipse cx="250" cy="125" rx="18" ry="10" fill="#FFD700"/>
+  <!-- Arms -->
+  <ellipse cx="235" cy="155" rx="6" ry="12" fill="#000000" transform="rotate(-20 235 155)"/>
+  <ellipse cx="265" cy="155" rx="6" ry="12" fill="#000000" transform="rotate(20 265 155)"/>
+  <!-- Mehandi Cone -->
+  <ellipse cx="265" cy="145" rx="3" ry="8" fill="#8B4513"/>
+  <ellipse cx="265" cy="135" rx="2" ry="4" fill="#654321"/>
+  
+  <!-- Garland -->
+  <path d="M100 80 Q200 60 300 80" fill="none" stroke="#228B22" stroke-width="3"/>
+  <!-- Leaves -->
+  <ellipse cx="120" cy="75" rx="8" ry="4" fill="#228B22" transform="rotate(-30 120 75)"/>
+  <ellipse cx="180" cy="70" rx="8" ry="4" fill="#228B22" transform="rotate(30 180 70)"/>
+  <ellipse cx="240" cy="75" rx="8" ry="4" fill="#228B22" transform="rotate(-30 240 75)"/>
+  <!-- Orange Dots -->
+  <circle cx="140" cy="75" r="3" fill="#FF8C00"/>
+  <circle cx="200" cy="70" r="3" fill="#FF8C00"/>
+  <circle cx="260" cy="75" r="3" fill="#FF8C00"/>
+</svg>

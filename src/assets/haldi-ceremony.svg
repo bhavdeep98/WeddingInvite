@@ -1,0 +1,64 @@
+<svg width="400" height="300" viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="400" height="300" fill="#FFFFFF"/>
+  
+  <!-- Bowl 1 (Left) -->
+  <ellipse cx="120" cy="200" rx="80" ry="25" fill="#FFD700" stroke="#FFA500" stroke-width="2"/>
+  <ellipse cx="120" cy="200" rx="70" ry="20" fill="#FFE135"/>
+  
+  <!-- Bowl 2 (Right) -->
+  <ellipse cx="280" cy="200" rx="80" ry="25" fill="#FFD700" stroke="#FFA500" stroke-width="2"/>
+  <ellipse cx="280" cy="200" rx="70" ry="20" fill="#FFE135"/>
+  
+  <!-- Sweets in Bowl 1 -->
+  <circle cx="100" cy="190" r="4" fill="#FF8C00"/>
+  <circle cx="115" cy="195" r="3" fill="#FFA500"/>
+  <circle cx="130" cy="190" r="4" fill="#FF8C00"/>
+  <circle cx="110" cy="205" r="3" fill="#FFA500"/>
+  <circle cx="125" cy="205" r="4" fill="#FF8C00"/>
+  <circle cx="105" cy="200" r="3" fill="#FFA500"/>
+  
+  <!-- Sweets in Bowl 2 -->
+  <circle cx="260" cy="190" r="4" fill="#FF8C00"/>
+  <circle cx="275" cy="195" r="3" fill="#FFA500"/>
+  <circle cx="290" cy="190" r="4" fill="#FF8C00"/>
+  <circle cx="270" cy="205" r="3" fill="#FFA500"/>
+  <circle cx="285" cy="205" r="4" fill="#FF8C00"/>
+  <circle cx="265" cy="200" r="3" fill="#FFA500"/>
+  
+  <!-- Woman (Left) -->
+  <!-- Body -->
+  <ellipse cx="120" cy="160" rx="25" ry="35" fill="#000000"/>
+  <!-- Dress -->
+  <path d="M95 160 Q120 140 145 160 L145 180 Q120 200 95 180 Z" fill="#FFD700"/>
+  <!-- Hair -->
+  <path d="M100 130 Q120 120 140 130 Q135 125 120 120 Q105 125 100 130" fill="#000000"/>
+  <!-- Arms -->
+  <ellipse cx="105" cy="155" rx="8" ry="15" fill="#000000" transform="rotate(-20 105 155)"/>
+  <ellipse cx="135" cy="155" rx="8" ry="15" fill="#000000" transform="rotate(20 135 155)"/>
+  <!-- Hands -->
+  <circle cx="100" cy="170" r="6" fill="#000000"/>
+  <circle cx="140" cy="170" r="6" fill="#000000"/>
+  <!-- Bracelet -->
+  <circle cx="100" cy="170" r="8" fill="none" stroke="#FF0000" stroke-width="2"/>
+  
+  <!-- Man (Right) -->
+  <!-- Body -->
+  <ellipse cx="280" cy="160" rx="25" ry="35" fill="#000000"/>
+  <!-- Kurta -->
+  <path d="M255 160 Q280 140 305 160 L305 180 Q280 200 255 180 Z" fill="#FFD700"/>
+  <!-- Pants -->
+  <rect x="260" y="175" width="40" height="25" fill="#FFFFFF"/>
+  <!-- Beard -->
+  <ellipse cx="280" cy="145" rx="15" ry="8" fill="#000000"/>
+  <!-- Turban -->
+  <ellipse cx="280" cy="125" rx="20" ry="12" fill="#FFD700"/>
+  <!-- Arms -->
+  <ellipse cx="265" cy="155" rx="8" ry="15" fill="#000000" transform="rotate(-20 265 155)"/>
+  <ellipse cx="295" cy="155" rx="8" ry="15" fill="#000000" transform="rotate(20 295 155)"/>
+  <!-- Hands -->
+  <circle cx="260" cy="170" r="6" fill="#000000"/>
+  <circle cx="300" cy="170" r="6" fill="#000000"/>
+  <!-- Bracelet -->
+  <circle cx="300" cy="170" r="8" fill="none" stroke="#FF0000" stroke-width="2"/>
+</svg>
