@@ -38,8 +38,8 @@ echo "   - Backend API: http://localhost:$PORT/api"
 echo "   - Frontend: http://localhost:$PORT"
 echo "   - Health check: http://localhost:$PORT/api/health"
 
-# Start the server
-node server.js
+# Start the simplified server
+node server-simple.js
 
 # If we reach here, the server has stopped
 echo "🛑 Server stopped"
