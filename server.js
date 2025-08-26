@@ -13,11 +13,20 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 const app = express();
-const PORT = 3001;
+const PORT = process.env.PORT || 3001;
 
 // Middleware
 app.use(cors());
 app.use(express.json());
+
+// Serve static files from the built frontend
+app.use(express.static(path.join(__dirname, 'dist')));
+
+// API routes
+app.use('/api', (req, res, next) => {
+  console.log(`${req.method} ${req.path}`);
+  next();
+});
 
 // Create data directory if it doesn't exist
 const dataDir = path.join(__dirname, 'form-submissions');
@@ -247,6 +256,11 @@ app.get('/api/health', (req, res) => {
     emailConfigured: !!(process.env.EMAIL_USER && process.env.EMAIL_PASS),
     googleSheetsConfigured: !!(process.env.GOOGLE_SHEETS_SPREADSHEET_ID && process.env.GOOGLE_SERVICE_ACCOUNT_EMAIL)
   });
+});
+
+// Catch-all route to serve the frontend
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname, 'dist', 'index.html'));
 });
 
 app.listen(PORT, () => {

@@ -20,8 +20,8 @@ COPY . .
 # Build the application
 RUN npm run build
 
-# Make start script executable
-RUN chmod +x start-all.sh
+# Make start scripts executable
+RUN chmod +x start-all.sh start-railway.sh
 
 # Expose port
 EXPOSE 8080 3001
@@ -31,4 +31,4 @@ HEALTHCHECK --interval=30s --timeout=3s --start-period=5s --retries=3 \
   CMD curl -f http://localhost:3001/api/health || exit 1
 
 # Start the application
-CMD ["./start-all.sh"]
+CMD ["./start-railway.sh"]
